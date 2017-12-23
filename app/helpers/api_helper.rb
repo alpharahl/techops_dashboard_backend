@@ -4,7 +4,7 @@ module ApiHelper
       method: :post,
       url: 'https://staging4.uber.magfest.org/uber/jsonrpc/',
       payload: payload.to_json,
-      headers: {"X-Auth-Token": ENV["api_token"]}
+      headers: {"X-Auth-Token": ENV["API_TOKEN"]}
     ))["result"]
   end
 end
