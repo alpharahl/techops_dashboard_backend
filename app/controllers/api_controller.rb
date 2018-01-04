@@ -72,9 +72,20 @@ class ApiController < ApplicationController
       }
     }
     resp = ApiHelper.api_request(payload)
+
+    #massaging data
     resp.each do |r|
       r["end_time"] = Time.parse(r["end_time"]) - 5.hours
       r["start_time"] = Time.parse(r["start_time"]) - 5.hours
+      staff = []
+      r["shifts"].each do |shift|
+        worked = shift["worked_label"] == "This shift was worked"
+        staff << {
+          "name" => shift["attendee"]["full_name"],
+          "worked" => worked
+        }
+      end
+      r["staff"] = staff
     end
 
     render(json: resp)
