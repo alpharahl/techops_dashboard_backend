@@ -20,7 +20,7 @@ class ApiController < ApplicationController
       "params" => [
         techops,
         current_time - 30.minutes,
-        current_time + 15.minutes
+        current_time + 2.hours
       ]
     }
     jobs = ApiHelper.api_request(payload)
@@ -67,7 +67,7 @@ class ApiController < ApplicationController
       "params" => {
         "department_id" => techops,
         "start_time" => current_time - 4.hours - 30.minutes,
-        "end_time" => current_time + 2.hours
+        "end_time" => current_time + 30.minutes
       }
     }
     resp = ApiHelper.api_request(payload)
