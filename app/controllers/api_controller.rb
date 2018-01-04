@@ -10,11 +10,11 @@ class ApiController < ApplicationController
 
     payload = {
       "method" => "barcode.lookup_attendee_from_barcode",
-      "params" => [params[:barcode]]
+      "params" => [params[:barcode][0..-1]]
     }
     user = ApiHelper.api_request(payload)
     current_time = Time.now
-    current_time = current_time - 5.hours
+    # current_time = current_time - 5.hours
     payload = {
       "method" => "shifts.lookup",
       "params" => [
@@ -46,8 +46,8 @@ class ApiController < ApplicationController
       resp = ApiHelper.api_request(payload)
       render(json: {"name" => resp["name"]}.to_json, status: 200)
     else
-      # render(text: "No Shfit Found", status: 404)
-      render(text: jobs)
+      render(text: "No Shfit Found", status: 404)
+      # render(text: "#{user}\n\n#{jobs})
     end
   end
 
