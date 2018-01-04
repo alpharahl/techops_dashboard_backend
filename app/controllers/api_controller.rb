@@ -10,7 +10,7 @@ class ApiController < ApplicationController
 
     payload = {
       "method" => "barcode.lookup_attendee_from_barcode",
-      "params" => [params[:barcode][0..-1]]
+      "params" => [params[:barcode][0..-2]]
     }
     user = ApiHelper.api_request(payload)
     current_time = Time.now
