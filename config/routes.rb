@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :api
 
   get 'index' => 'api#index'
-  get '/mark_shift_worked/:barcode' => 'api#mark_shift_worked'
+  get 'mark_shift_worked/:barcode' => 'api#mark_shift_worked'
   get 'current_shifts' => 'api#current_shifts'
   get 'check_auth' => 'api#check_auth'
 end
