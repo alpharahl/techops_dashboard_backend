@@ -46,8 +46,8 @@ class ApiController < ApplicationController
       resp = ApiHelper.api_request(payload)
       render(json: {"name" => resp["name"]}.to_json, status: 200)
     else
-      render(text: "No Shfit Found", status: 404)
-      # render(text: jobs)
+      # render(text: "No Shfit Found", status: 404)
+      render(text: jobs)
     end
   end
 
