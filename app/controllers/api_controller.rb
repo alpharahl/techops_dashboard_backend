@@ -14,7 +14,7 @@ class ApiController < ApplicationController
     }
     user = ApiHelper.api_request(payload)
     current_time = Time.now
-    current_time = current_time - 4.hours
+    # current_time = current_time - 4.hours
     payload = {
       "method" => "shifts.lookup",
       "params" => [
