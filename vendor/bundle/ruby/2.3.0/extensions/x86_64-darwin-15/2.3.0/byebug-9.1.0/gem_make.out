@@ -1,0 +1,19 @@
+current directory: /Users/alpha/sites/techops_dashboard_backend/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+/Users/alpha/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20181204-86924-4z36w0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/alpha/sites/techops_dashboard_backend/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/alpha/sites/techops_dashboard_backend/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/alpha/sites/techops_dashboard_backend/vendor/bundle/ruby/2.3.0/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20181204-86924-624diz/byebug
